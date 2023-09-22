@@ -247,12 +247,12 @@
   height: auto;
   margin: 0 38px;
 }
-@media (max-width: 780px) {
+@media (max-width: 768px) {
   .home-sidebar-container {
     margin: 0 19px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 640px) {
   .home-sidebar-container {
     display: none;
   }
@@ -353,7 +353,7 @@
   text-align: left;
   border-radius: 9px;
   cursor: pointer;
-  font-family: Satoshi-Variable, Noto Sans CJK, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
+  font-family: Satoshi-Variable, Noto Sans SC, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
 }
 .home-sidebar-container .sidebar-links .links .link-name {
   font-weight: 450;
