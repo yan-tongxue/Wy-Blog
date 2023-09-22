@@ -22,8 +22,9 @@ function setTabs() {
   });
 }
 
-try {
-  swup.hooks.on("page:view", setTabs);
-} catch (e) {}
 
-document.addEventListener("DOMContentLoaded", setTabs);
+if (Global.theme_config.global.pjax === true && Global.utils) {
+    setTabs();
+} else {
+    window.addEventListener('DOMContentLoaded', setTabs);
+}
