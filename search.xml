@@ -4578,4 +4578,46 @@
         <tag>忘忧树洞</tag>
       </tags>
   </entry>
+  <entry>
+    <title>idea插件分享</title>
+    <url>/2023/11/25/idea%E6%8F%92%E4%BB%B6%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<h1 id="idea插件分享"><a href="#idea插件分享" class="headerlink" title="idea插件分享"></a>idea插件分享</h1><p>原文链接：<a class="link"   href="https://blog.csdn.net/liliangpin/article/details/131526467" >30 款狂拽酷炫的 IDEA 插件，拉满生产力_猿同学的博客-CSDN博客 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<ol>
+<li><p>Codota——代码智能提示</p>
+<p>只要打出首字母就能联想出一整条语句，还可以显示每条语句的实用频率。</p>
+</li>
+<li><p>Alibaba Java Code Guidelines——阿里巴巴Java代码规范</p>
+<p>针对没有Code Review的公司，按照阿里巴巴Java规范来开发。</p>
+</li>
+<li><p>Translation——必备的翻译插件</p>
+<p>在日常的开发活动中，看文档一直是个问题，此插件可以直接右键翻译。</p>
+</li>
+<li><p>Rainbow Brackets——让你的括号变成不一样的彩虹颜色，防止错乱括号</p>
+<p>成对的括号显示相同的颜色，可以解决视觉上的冲突，方便定位查看。</p>
+</li>
+<li><p>CodeGlance——缩略图</p>
+<p>当代码很多的时候，方便查看，可以在界面右边滑动定位查看很方便。</p>
+</li>
+<li><p>Material Theme UI——IDEA主题插件</p>
+</li>
+<li><p>Maven Helper——方便maven项目解决jar冲突</p>
+<p>这是一个解决Maven依赖冲突，可以快速查找项目中的依赖冲突，给出解决方案！</p>
+</li>
+<li><p>RestfulTool——一套Restful服务开发辅助工具集</p>
+<p>每次报错了拿着前端的请求路径，不用一个个的controller里找了，直接Ctrl+Alt+&#x2F;就可以精确定位</p>
+</li>
+<li><p>FindBugs——检查代码bug隐患，并给出原因</p>
+</li>
+<li><p>lombok——减少代码重复编写，并提供比较好的解决方案</p>
+<p>实体类中的get&#x2F;set&#x2F;构造&#x2F;toString&#x2F;hashCode等方法，都不需要我们再手写了。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>工具篇</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
 </search>
