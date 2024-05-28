@@ -4688,4 +4688,72 @@
         <tag>Java</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Spring Ai,它来了</title>
+    <url>/2024/05/28/Spring-Ai-%E5%AE%83%E6%9D%A5%E4%BA%86/</url>
+    <content><![CDATA[<p>SpringAi</p>
+<p>在当今这个由数据和智能驱动引领生产力的时代，人工智能（AI）已经成为推动业务创新和优化用户体验的关键力量。它正已前所未有的速度渗透到我们生活的每一个角落，并且已经在众多领域有了突破发展，由我们最先熟知的ChatGPT到现在的多AI共同发展，这将大大提高我们的日常生产力。</p>
+<p>然而，对于我们许多Java开发者来说，该如何去将Ai集成在我们现有的应用和服务中呢？</p>
+<p>Spring Ai会告诉你答案：</p>
+<p>随着Spring Ai的诞生，我们熟知的Spring生态系统又多了一个特殊力量——量身打造的Ai框架，这无疑是Java和AI领域的一大进步。</p>
+<p>下面来介绍一些Spring Ai：</p>
+<p>官方文档：<a class="link"   href="https://docs.spring.io/spring-ai/reference/index.html" >https://docs.spring.io/spring-ai/reference/index.html <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/image-20240416100510616.png"
+                      alt="image-20240416100510616"
+                ></p>
+<p>这是来自Spring Ai的官方文档，那么我给大家翻译一下：</p>
+<p>该项目从著名的 Python 项目（如 LangChain 和 LlamaIndex）中汲取灵感，但 Spring AI 并不是这些项目的直接移植。 该项目的成立信念是，下一波生成式人工智能应用程序将不仅适用于 Python 开发人员，而且将在许多编程语言中无处不在。</p>
+<p>Spring AI 的核心是提供抽象，作为开发 AI 应用程序的基础。 这些抽象具有多种实现，只需最少的代码更改即可轻松交换组件。</p>
+<p><strong>Spring AI 提供以下功能：</strong></p>
+<ul>
+<li>支持所有主要的模型提供商，如OpenAI，Microsoft，Amazon，Google和Huggingface。</li>
+<li>支持的模型类型包括聊天和文本到图像，还有更多类型正在开发中。</li>
+<li>跨 AI 提供商的可移植 API，用于聊天和嵌入模型。支持同步和流 API 选项。还支持下拉以访问特定于模型的功能。</li>
+<li>将 AI 模型输出映射到 POJO。</li>
+<li>支持所有主要的矢量数据库提供程序，例如 Azure Vector Search、Chroma、Milvus、Neo4j、PostgreSQL&#x2F;PGVector、PineCone、Qdrant、Redis 和 Weaviate</li>
+<li>跨 Vector Store 提供程序的可移植 API，包括新颖的类似 SQL 的元数据过滤器 API，该 API 也是可移植的。</li>
+<li>函数调用</li>
+<li>AI 模型和矢量存储的 Spring Boot 自动配置和启动器。</li>
+<li>用于数据工程的 ETL 框架</li>
+</ul>
+<p><strong>特性概述：</strong></p>
+<ul>
+<li>模型输入&#x2F;输出</li>
+<li>整合数据</li>
+<li>连接多个Ai模型交互</li>
+<li>内存</li>
+<li>代理</li>
+</ul>
+<p><strong>框架入门：</strong></p>
+<p>首先，<code>AiClient</code> 与 <em>OpenAI</em> 平台的所有通信都需要 API Key。为此，可以在 <a class="link"   href="https://platform.openai.com/account/api-keys" >“API Keys” <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 页面上创建一个 Token。</p>
+<p>Spring AI 项目定义了配置属性：<code>spring.ai.openai.api-key</code>。</p>
+<p>可以在 <code>application.yml</code> 文件中进行设置。</p>
+<div class="highlight-container" data-rel="Yaml"><figure class="iseeu highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">ai:</span></span><br><span class="line">    <span class="attr">openai.api-key:</span> <span class="string">$&#123;OPEN_AI_KEY&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>下一步是配置依赖。Spring AI 项目在 Spring 里程碑库（<a class="link"   href="https://mvnrepository.com/repos/springio-milestone" >Spring Milestone Repository <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）中提供了组件。</p>
+<p>因此，需要添加 <code>repository</code> 定义：</p>
+<div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">repositories</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">repository</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span>&gt;</span>spring-snapshots<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>Spring Snapshots<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url</span>&gt;</span>https://repo.spring.io/snapshot<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">releases</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">enabled</span>&gt;</span>false<span class="tag">&lt;/<span class="name">enabled</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">releases</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">repository</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">repositories</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>之后，就可以导入 <a class="link"   href="https://github.com/spring-projects/spring-ai" >open-ai-spring-boot-starter <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>：</p>
+<div class="highlight-container" data-rel="Xml"><figure class="iseeu highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.experimental.ai<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-ai-openai-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>0.7.1-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>Spring AI 项目正在积极发展，你可以查看 <a class="link"   href="https://github.com/spring-projects/spring-ai" >官方 GitHub 页面 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 了解最新版本。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\20619\Desktop\image-20240416101807546.png"
+                      alt="image-20240416101807546"
+                ></p>
+<p>另外还提供了许多API，例如聊天、图形生成、函数调用等等。</p>
+]]></content>
+      <categories>
+        <category>记录篇</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
 </search>
