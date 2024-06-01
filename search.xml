@@ -4756,4 +4756,89 @@
         <tag>Java</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Django框架安装SimpleUi教程</title>
+    <url>/2024/06/01/Django%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85SimpleUi%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="Django框架安装SimpleUi教程"><a href="#Django框架安装SimpleUi教程" class="headerlink" title="Django框架安装SimpleUi教程"></a>Django框架安装SimpleUi教程</h1><h2 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h2><p>pip install django-simpleui</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/09809b3ac0a66854e6a7f38c24e4e0e.png"
+                      alt="09809b3ac0a66854e6a7f38c24e4e0e"
+                ></p>
+<h2 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h2><p>python manage.py startapp background</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/09da475381a8b4f1b7190e4508ad3f6.png"
+                      alt="09da475381a8b4f1b7190e4508ad3f6"
+                ></p>
+<h2 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h2><p>修改一下这几个地方</p>
+<p>1.这个是设置一下中文编码以及时区，可以按照我的来写：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/b6a3b949b10691d2bd9495ec7a35bb6.png"
+                      alt="b6a3b949b10691d2bd9495ec7a35bb6"
+                ></p>
+<p>2.在python的app包中导入一下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/59026ec18ccac714e6015352386e1e2.png"
+                      alt="59026ec18ccac714e6015352386e1e2"
+                ></p>
+<p>注意一下：SimpleUi的引入是必须摇放在admin上面的，优先级肯定是要比admin高的，否则你进入首页的时候，你会发现还是之前的老页面。</p>
+<h2 id="第五步："><a href="#第五步：" class="headerlink" title="第五步："></a>第五步：</h2><p>这个不多说，学python的都知道，老两样：</p>
+<p>1.创建数据库或者修改数据库，如果不合法会有提示，很方便</p>
+<p>python manage.py makemigrations</p>
+<p>2.执行完上面的只是生成了对应的sql语句，还并没有真正将改动迁移到数据库中，需要执行这个才能将改动迁移到数据库，才会完成建表修改字段等操作：</p>
+<p>python manage.py migrate</p>
+<h2 id="第六步："><a href="#第六步：" class="headerlink" title="第六步："></a>第六步：</h2><p>如果现在没有管理员账户的话记得创建一下，如果有就可以不用先：</p>
+<p>python manage.py createsuperuser</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/d1124073bbe29fefd1f8911163541ea.png"
+                      alt="d1124073bbe29fefd1f8911163541ea"
+                ></p>
+<h2 id="第七步："><a href="#第七步：" class="headerlink" title="第七步："></a>第七步：</h2><p>可以正式的启动一下项目看看地址验证是否部署成功了：</p>
+<p>python manage.py runserver</p>
+<p>默认的网址：<a class="link"   href="http://127.0.0.1:8000/admin/#/" >http://127.0.0.1:8000/admin <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/image-20240601140002648.png"
+                      alt="image-20240601140002648"
+                ></p>
+<p>看到这个页面就代表着已经完美配置成功啦！</p>
+<p>然后我们可以取消一下debug模式了，在setting.py文件下：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/ee6b3c3f31e025674210acfd39fb132.png"
+                      alt="ee6b3c3f31e025674210acfd39fb132"
+                ></p>
+<p>然后可以识别一下static静态文件：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/493a988a9053a72f964f662bbc698fc.png"
+                      alt="493a988a9053a72f964f662bbc698fc"
+                ></p>
+<p>搞定搞定：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://wy-blog-image.oss-cn-guangzhou.aliyuncs.com/img/image-20240601140151202.png"
+                      alt="image-20240601140151202"
+                ></p>
+]]></content>
+      <categories>
+        <category>创作篇</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
 </search>
